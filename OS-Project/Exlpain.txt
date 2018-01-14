@@ -1,0 +1,62 @@
+Operating-System Project 2017
+
+Lecturer: Martin Hynes
+
+Student Name: Tianle Shu
+
+Student ID: G00353418
+
+
+This Project is a Multi-threaded TCP Server Application which allows multiple users to record their daily training and eating habits.
+
+A . 
+The OS-Project-Server Document hava two main file: data file,src file.
+
+I. data file: There are .dat documents. Save every users information.Every user registed,they hava a .dat document,there are 6 register informations and fitness                  and meal records that they fill each time.
+
+II. scr file: There are 3 class.(EchoServer.java,Person.java,Record.java)
+
+i. The EchoServer.java : There are 4 methods.('register','log_in',add','view'),main menu: a. enter '1' for register.  b. enter '2' for log_in.  c. enter '9' to exit.
+
+1.  The 'register' method: When user enter '1'.It will send 6 request sentence to user and receive the user's message from Client and send the some request                                          sentence to Client for user enter.And save these user's information to .dat document.
+
+2.  The 'log_in' method: When user enter '2'.If user already registed,They can enter '2' for 'log_in'. And They will be asked to enter their name(entered when                                         registering ).
+                                 a. If the name is wrong,will send "The account is not exist." and back to main menu.
+                                 b. If the name is correct. You will be asked to enter thier pps number.
+                                 b(1). if the pps number is wrong.will send "Your PPS Number is wrong." and back to main menu.
+                                 b(2). if the pps number is correct.will send "You successed to log_in!!" and go to next menu.
+
+3.  The 'add' mehod:when the user log_in successed.User will receive another nemu.
+                            a. If user enter '1' user will be asked enter fitness records. save in .dat document.
+                            b. If user enter '2' user will be asked enter meal records.  save in .dat document.
+
+4.  The 'view' method:second menu(when log_in seccessed)
+                               a. If user enter '1' (go to the 'add' method)user will be asked enter fitness records.
+                               b. If user enter '2' (go to the 'add' method)user will be asked enter meal records.  
+                               c. If user enter '4' will view the meal details and fitness details.
+                                   It will view all details if the number of all records < 10 .
+                                   It will view last 10 details if the number of all records >= 10 .
+                               d. If user enter '5' will view the meal details.
+                                   It will view all meal details if the number of meal records < 10 .
+                                   It will view last 10 meal details if the number of meal records >= 10 .
+                               e. If user enter '7' will back to main menu.
+
+ii. The Person.java: set and get register information
+
+iii. The Record.java: set and get add meal and fitenss records.
+
+
+B.
+The OS-Project-Client Document
+
+The Requester.java : The firstly input ip address(local address:127.0.0.1) for connect server and communicate with sercer. The main fuction is receive the                               message from Server and send the message of user enter.
+
+
+
+
+
+
+
+
+
+
